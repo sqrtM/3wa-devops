@@ -55,18 +55,18 @@ class CalculatorTest extends TestCase
     public function testDoesNotAcceptSuccessiveSeparators()
     {
         self::assertEquals(4, $this->calculator->add("2,2"));
-        $this->expectExceptionMessage("Input contains a non-numeric character which is not a valid separator");
+        $this->expectExceptionMessage("Input contains a non-numeric character which is not a valid separator: \n");
         self::assertEquals(11, $this->calculator->add("4,4,\n3"));
     }
 
     /**
      * @throws Exception
      */
-    public function testAcceptsSingleCharCustomSeparator()
+    public function testAcceptsCustomSeparator()
     {
         self::assertEquals(4, $this->calculator->add("//;\n2;2"));
-        self::assertEquals(4, $this->calculator->add("//f\n2f2"));
-        self::assertEquals(13, $this->calculator->add("//|\n4,4|3\n2"));
+        self::assertEquals(4, $this->calculator->add("//pqsdfp\n2pqsdfp2"));
+        self::assertEquals(13, $this->calculator->add("//|fq\n4,4|fq3\n2"));
     }
 
     /**
@@ -83,7 +83,9 @@ class CalculatorTest extends TestCase
      */
     public function testExceptionsConcatCorrectly()
     {
-        $this->expectExceptionMessage("Negative number(s) not allowed : -2\nNegative number(s) not allowed : -3\nInput contains a non-numeric character which is not a valid separator");
+        $this->expectExceptionMessage(
+            "Negative number(s) not allowed : -2\nNegative number(s) not allowed : -3\nInput contains a non-numeric character which is not a valid separator: v"
+        );
         self::assertEquals(0, $this->calculator->add("//;\n2;-2,-3,v"));
     }
 }

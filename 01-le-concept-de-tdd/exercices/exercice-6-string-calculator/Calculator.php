@@ -25,17 +25,7 @@ class Calculator
             return 0;
         }
 
-        $separator = [];
-        if (preg_match($this->regex, $input, $separator)) {
-            $separatorChar = $separator[1];
-            fwrite(STDERR, print_r($separator[1], true));
-
-            $input = preg_replace($this->regex, "", $input);
-        } else {
-            $separatorChar = ",";
-        }
-        $pattern = "/[" . preg_quote($separatorChar, '/') . "\\n,]/";
-        $numerals = preg_split($pattern, $input);
+        $numerals = $this->extractNumerals($input);
 
         foreach ($numerals as $numeral) {
             if (!is_numeric($numeral)) {
@@ -70,5 +60,20 @@ class Calculator
         if (!$this->exception) {
             $this->exception = true;
         }
+    }
+
+    private function extractNumerals(string $input): array
+    {
+        $separator = [];
+        if (preg_match($this->regex, $input, $separator)) {
+            $separatorChar = preg_quote($separator[1]);
+
+            // this regex took me WAY too long for something so simple...
+            $input = preg_replace($this->regex, "", $input);
+            $pattern = "/($separatorChar|\n|,)/";
+        } else {
+            $pattern = "/[\\n,]/";
+        }
+        return preg_split($pattern, $input);
     }
 }
