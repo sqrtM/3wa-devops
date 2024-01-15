@@ -5,19 +5,25 @@ namespace App;
 class Message
 {
     protected $array = [];
+    private string $lang;
     public function __construct(
-        private string $lang = 'fr',
         private array $translates = [
             'fr' => 'Bonjour tout le monde!',
             'en' => 'Hello World!'
         ]
     ) 
     {
+        $this->lang = $_ENV['LANGUAGE'];
     }
 
     public function get(): string
     {
         return $this->translates[$this->lang];
+    }
+
+    public function getLang(): string
+    {
+        return $this->lang;
     }
 
     public function setLang(string $lang): void

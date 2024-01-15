@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Tests;
+namespace App\Examples\Tests;
 
 // Framework de tests PHPUNIT
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes;
 
-use App\Message;
+use App\Examples\Message;
 
 class MessageTest extends TestCase
 {
