@@ -4,9 +4,8 @@ namespace App;
 
 class ModelPrepare
 {
-    public function __construct(private \PDO $pdo)
+    public function __construct(private readonly \PDO $pdo)
     {
-        $this->pdo = $pdo;
     }
 
     /**
