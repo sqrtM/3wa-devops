@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+        <option value="$PROJECT_DIR$/exercices/exercice-4-fibo/tests" />
+        <option value="$PROJECT_DIR$/exercices/exercice-1-message-dotenv/tests" />
+        <option value="$PROJECT_DIR$/exercices/exercice-2-calculator/tests" />
+        <option value="$PROJECT_DIR$/exercices/exercice-3-model/tests" />
+        <option value="$PROJECT_DIR$/examples/message/tests" />
+      </list>
+    </option>
+  </component>
+</project>

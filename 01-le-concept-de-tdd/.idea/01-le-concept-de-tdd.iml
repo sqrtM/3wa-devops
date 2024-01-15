@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/examples/message/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/examples/message/tests" isTestSource="false" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/challenge-01/src" isTestSource="false" packagePrefix="Cart\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-1-message-dotenv/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-1-message-dotenv/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-1-message-dotenv/tests" isTestSource="false" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-2-calculator/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-2-calculator/tests" isTestSource="false" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-3-model/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-3-model/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-3-model/tests" isTestSource="false" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-4-fibo/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-4-fibo/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/exercices/exercice-4-fibo/tests" isTestSource="false" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/skeleton/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/exercices/vendor" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
