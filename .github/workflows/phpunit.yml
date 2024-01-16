@@ -18,12 +18,17 @@ jobs:
         with:
           php-version: 8.1
 
+      - name: Install dependencies
+        run: |
+          composer install
+          composer global require phpunit/phpunit
+
       - name: Run PHPUnit tests
         run: |
           for exercise_folder in 01-le-concept-de-tdd/exercices/*/; do
             if [ -f "$exercise_folder/phpunit.xml.dist" ]; then
               cd "$exercise_folder"
-              phpunit --verbose
+              $HOME/.composer/vendor/bin/phpunit --verbose
               cd -
             else
               echo "No PHPUnit configuration found in $exercise_folder."
