@@ -20,4 +20,12 @@ jobs:
 
       - name: Run PHPUnit tests
         run: |
-          find 01-le-concept-de-tdd/exercices -type d -name 'phpunit.xml.dist' -exec sh -c 'cd {} && phpunit --verbose' \;
+          for exercise_folder in 01-le-concept-de-tdd/exercices/*/; do
+            if [ -f "$exercise_folder/phpunit.xml.dist" ]; then
+              cd "$exercise_folder"
+              phpunit --verbose
+              cd -
+            else
+              echo "No PHPUnit configuration found in $exercise_folder."
+            fi
+          done
