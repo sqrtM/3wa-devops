@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Exercise10\\tests\\BankAccountTest::testDeposit":8,"Exercise10\\tests\\BankAccountTest::testWithdraw":8,"Exercise10\\tests\\BankAccountTest::testPrintStatement":7},"times":{"Exercise10\\tests\\BankAccountTest::testDeposit":0.001,"Exercise10\\tests\\BankAccountTest::testWithdraw":0,"Exercise10\\tests\\BankAccountTest::testPrintStatement":0.002}}
