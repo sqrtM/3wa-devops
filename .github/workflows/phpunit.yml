@@ -28,7 +28,7 @@ jobs:
           for exercise_folder in 01-le-concept-de-tdd/exercices/*/; do
             if [ -f "$exercise_folder/phpunit.xml.dist" ]; then
               cd "$exercise_folder"
-              $HOME/.composer/vendor/bin/phpunit --verbose
+              $HOME/.composer/vendor/bin/phpunit
               cd -
             else
               echo "No PHPUnit configuration found in $exercise_folder."
