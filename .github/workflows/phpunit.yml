@@ -20,4 +20,4 @@ jobs:
 
       - name: Run PHPUnit tests
         run: |
-          find 01-le-concept-de-tdd/exercices -type d -name 'phpunit.xml.dist' -exec sh -c 'cd {} && phpunit' \;
+          find 01-le-concept-de-tdd/exercices -type d -name 'phpunit.xml.dist' -exec sh -c 'cd {} && phpunit --verbose' \;
